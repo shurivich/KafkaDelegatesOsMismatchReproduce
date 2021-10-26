@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "KafkaDelegatesOsMismatchReproduce": {
+      "commandName": "Project"
+    },
+    "Docker": {
+      "commandName": "Docker"
+    }
+  }
+}

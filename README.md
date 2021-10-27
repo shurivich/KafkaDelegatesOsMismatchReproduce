@@ -23,3 +23,10 @@ RUN ln -s /lib/libc.musl-x86_64.so.1 /lib/ld-linux-x86-64.so.2
 ```
 
 Project should be compiled with "Release" configuration.
+
+## Expected result
+> Succeed to build
+> We finished
+
+## Actual result
+No console output, app crashes

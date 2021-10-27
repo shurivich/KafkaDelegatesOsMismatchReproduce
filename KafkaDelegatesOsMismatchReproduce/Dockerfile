@@ -20,4 +20,11 @@ COPY --from=publish /app/publish .
 
 #Following line will cause Kafka to pick up NativeMethods_Centos6 delegates instead of NativeMethods_Alpine
 RUN ln -s /lib/libc.musl-x86_64.so.1 /lib/ld-linux-x86-64.so.2
+
+#Uncomment lines below in order to receive dump file on crash
+#ENV COMPlus_DbgMiniDumpType=4 
+#ENV COMPlus_DbgEnableMiniDump=1 
+#ENV COMPlus_DbgMiniDumpName="/app/coredump.%d" 
+#ENV PATH="$PATH:/app" 
+
 ENTRYPOINT ["dotnet", "KafkaDelegatesOsMismatchReproduce.dll"]
